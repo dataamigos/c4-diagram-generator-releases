@@ -8,6 +8,7 @@ AI-powered desktop app that generates **draw.io XML for C4 architecture diagrams
 
 | Version | File | Platform |
 |---|---|---|
+| [v1.5.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.5.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
 | [v1.1.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.1.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
 | [v1.0.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.0.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
 
@@ -16,6 +17,15 @@ AI-powered desktop app that generates **draw.io XML for C4 architecture diagrams
 ---
 
 ## Features
+
+### v1.5.0 — Official C4 Shape System
+- **Exact draw.io C4 shapes** — when you say "C4 diagram" or select a C4 type, the AI uses the official `<object placeholders="1">` XML pattern with real C4 styles
+- **All C4 element types**: Person (internal/external), Software System (internal/external), Container (app, database, microservice, message bus, web browser), Component
+- **Nested boundaries** — System Scope Boundary and Container Scope Boundary as dashed rounded rectangles, with child elements correctly parented inside
+- **Relationship arrows** use the official C4 Relationship format with technology and description labels
+- **Auto-Legend** — every C4 diagram includes the standard colour-coded legend (Person, Software System, Container, Component, External Person, External Software System)
+- **Smart detection** — automatically activates when prompt contains "c4 diagram", "c4 architecture", "c4 context/container/component", etc.
+- **Increased token budget** — 8 192 output tokens across all providers for complex diagrams
 
 ### v1.1.0 — Multi-Provider AI Support
 - **Gemini** (Google) — gemini-2.0-flash, gemini-2.5-pro, gemini-1.5-flash, gemini-1.5-pro
