@@ -8,6 +8,7 @@ AI-powered desktop app that generates **draw.io XML for C4 architecture diagrams
 
 | Version | File | Platform |
 |---|---|---|
+| [v1.5.1](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.5.1) | `C4DiagramGenerator.exe` | Windows 64-bit |
 | [v1.5.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.5.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
 | [v1.1.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.1.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
 | [v1.0.0](https://github.com/dataamigos/c4-diagram-generator-releases/releases/tag/v1.0.0) | `C4DiagramGenerator.exe` | Windows 64-bit |
@@ -17,6 +18,14 @@ AI-powered desktop app that generates **draw.io XML for C4 architecture diagrams
 ---
 
 ## Features
+
+### v1.5.1 — Python Generator Mode & Token Fixes
+- **🐍 Via Python checkbox** — AI writes a compact Python script (~100 tokens) that prints the XML; the app runs it locally and captures the output. No token ceiling for large C4 diagrams
+- **gemini-2.5-pro** added to the model list (65 536-token output budget)
+- Per-model Gemini output limits: `flash` = 8 192, `pro` / `2.5` = 65 536
+- Claude raised to 16 000 tokens, OpenAI raised to 16 384 tokens
+- Auto-repair of truncated XML — app closes open tags instead of crashing
+- Yellow warning in status bar when a response is detected as truncated
 
 ### v1.5.0 — Official C4 Shape System
 - **Exact draw.io C4 shapes** — when you say "C4 diagram" or select a C4 type, the AI uses the official `<object placeholders="1">` XML pattern with real C4 styles
